@@ -37,30 +37,35 @@
   </nav>
 </header>
 <main class="main-container">
-  <h1 class="main-container__title">
-    Подбор программы
-  </h1>
   <section class="application-form">
-    <h2 class="visually-hidden">
-      Анкета
-    </h2>
+    <h1 class="application-form__main-title">
+      Подбор программы
+    </h1>
     <p class="application-form__paragraph">
       Заполните анкету, и мы подберем программу питания для вашего кота
     </p>
     <form class="application-form__form" action="https://echo.htmlacademy.ru/" method="post">
-      <label class="application-form__form-label">
-        Имя:*
-        <input class="application-form__form-input" type="text" name="name" placeholder="Барсик">
-      </label>
-      <label class="application-form__form-label">
-        Вес (кг):*
-        <input class="application-form__form-input" type="number" name="weight" placeholder="7">
-      </label>
-      <label class="application-form__form-label">
-        Возраст (лет):
-        <input class="application-form__form-input" type="number" name="age" placeholder="7">
-      </label>
+      <fieldset class="application-form__personal">
+        <legend class="visually-hidden">
+          Персональные данные.
+        </legend>
+        <label class="application-form__form-label">
+          Имя:*
+          <input class="application-form__form-input" type="text" name="name" placeholder="Барсик">
+        </label>
+        <label class="application-form__form-label">
+          Вес (кг):*
+          <input class="application-form__form-input" type="number" name="weight" placeholder="7">
+        </label>
+        <label class="application-form__form-label">
+          Возраст (лет):
+          <input class="application-form__form-input" type="number" name="age" placeholder="7">
+        </label>
+      </fieldset>
       <fieldset class="application-form__radio">
+        <legend class="visually-hidden">
+          Желаемые цели.
+        </legend>
         <label class="application-form__radio-label">
           <input class="application-form__radio-input" type="radio" name="target" value="weight loss" checked>
           Похудение
@@ -74,19 +79,20 @@
           Не знаю (Нужен ваш совет)
         </label>
       </fieldset>
-      <div>
+      <fieldset class="application-form__contacts">
         <h3 class="application-form__title">
           Контактные данные (владельца кота)
         </h3>
         <label class="application-form__form-label">
           E-mail:*
-          <input class="application-form__form-input email-input" type="email" name="email" placeholder="kuklachev@gmail.com">
+          <input class="application-form__form-input email-input" type="email" name="email"
+                 placeholder="kuklachev@gmail.com">
         </label>
         <label class="application-form__form-label">
           Телефон:*
           <input class="application-form__form-input tel-input" type="tel" name="tel" placeholder="8 (960) 900-60-90">
         </label>
-      </div>
+      </fieldset>
       <div>
         <h3 class="application-form__title">
           Комментарий
@@ -99,9 +105,12 @@
         </textarea>
       </div>
       <fieldset class="application-form__checkbox">
-        <h3 class="application-form__title">Дополнительно</h3>
+        <h3 class="application-form__title">
+          Дополнительно
+        </h3>
         <label class="application-form__checkbox-label">
-          <input class="application-form__checkbox-input" type="checkbox" name="added-products" value="sweetener" checked>
+          <input class="application-form__checkbox-input" type="checkbox" name="added-products" value="sweetener"
+                 checked>
           сахарозаменитель
         </label>
         <label class="application-form__checkbox-label">
@@ -145,7 +154,7 @@
   <a class="page-footer__logo-cat-energy logo-title" href="#">
     <img class="logo-title__image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
   </a>
-  <ul class="social-list">
+  <ul class="page-footer__social-list social-list">
     <li class="social-list__item">
       <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
         Vkontakte
@@ -173,4 +182,3 @@
 </footer>
 </body>
 </html>
-<!-- просто комментарий -->
