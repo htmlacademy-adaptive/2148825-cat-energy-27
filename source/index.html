@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Cat Energy</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -41,19 +42,16 @@
     Интернет-магазин фитнес еды для котиков "Cat energy".
   </h1>
   <section class="banner">
-    <div class="banner__wrapper">
-      <h2 class="banner__title">
-        Функциональное питание для котов
-      </h2>
-      <p class="banner__slogan">
-        Занялся собой? Займись котом!
-      </p>
-      <img class="banner__image" src="img/can-image.png" width="280" height="270"
-           alt="Оранжевая банка кошачьего корма с курицей">
-      <a class="banner__button button" href="form.html">
-        Подобрать программу
-      </a>
-    </div>
+    <h2 class="banner__title">
+      Функциональное питание для котов
+    </h2>
+    <p class="banner__slogan">
+      Занялся собой? Займись котом!
+    </p>
+    <img class="banner__image" src="img/can-image.png" width="280" height="270" alt="Оранжевая банка кошачьего корма с курицей">
+    <a class="banner__button button" href="form.html">
+      Подобрать программу
+    </a>
   </section>
   <section class="approaches">
     <h2 class="visually-hidden">
@@ -123,34 +121,30 @@
     </p>
     <div class="live-example__wrapper estimate">
       <div class="estimate__wrapper">
-        <div class="estimate__wrapper-inner">
-          <div class="estimate__item estimate-item">
-            <p class="estimate-item__value">
-              5 кг
-            </p>
-            <small class="estimate-item__parameter">
-              снижение веса
-            </small>
-          </div>
-          <div class="estimate__item estimate-item">
-            <p class="estimate-item__value">
-              60 дней
-            </p>
-            <small class="estimate-item__parameter">
-              затрачено времени
-            </small>
-          </div>
+        <div class="estimate__item estimate-item">
+          <p class="estimate-item__value">
+            5 кг
+          </p>
+          <small class="estimate-item__parameter">
+            снижение веса
+          </small>
         </div>
-        <p class="estimate__price">
-          Затраты на питание: 15 000 РУБ.
-        </p>
+        <div class="estimate__item estimate-item">
+          <p class="estimate-item__value">
+            60 дней
+          </p>
+          <small class="estimate-item__parameter">
+            затрачено времени
+          </small>
+        </div>
       </div>
+      <p class="estimate__price">
+        Затраты на питание: 15 000 РУБ.
+      </p>
     </div>
     <div class="live-example__slider before-after">
-      <img class="before-after__image-before" src="img/example-before.png" width="280" height="256"
-           alt="Фото кота до питания кормом cat-energy">
-      <img class="before-after__image-after" src="img/example-after.png" width="280" height="256"
-           alt="Фото кота после питания кормом cat-energy, теперь он выглядит более стройным">
+      <img class="before-after__image-before" src="img/example-before.png" width="280" height="256" alt="Фото кота до питания кормом cat-energy">
+      <img class="before-after__image-after" src="img/example-after.png" width="280" height="256" alt="Фото кота после питания кормом cat-energy, теперь он выглядит более стройным">
     </div>
   </section>
   <section class="location">
@@ -173,23 +167,29 @@
   </section>
 </main>
 <footer class="page-footer">
-  <a class="page-footer__logo-cat-energy logo-title" href="#">
-    <img class="logo-title__image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
+  <a class="page-footer__logo-cat-energy" href="#">
+    <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
   </a>
   <ul class="page-footer__social-list social-list">
     <li class="social-list__item">
       <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
-        Vkontakte
+        <span class="visually-hidden">
+          Vkontakte.
+        </span>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-        YouTube
+        <span class="visually-hidden">
+          YouTube.
+        </span>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
-        Telegram
+        <span class="visually-hidden">
+          Telegram.
+        </span>
       </a>
     </li>
   </ul>

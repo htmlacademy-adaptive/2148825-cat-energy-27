@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Cat Energy</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -85,8 +86,7 @@
         </h3>
         <label class="application-form__form-label">
           E-mail:*
-          <input class="application-form__form-input email-input" type="email" name="email"
-                 placeholder="kuklachev@gmail.com">
+          <input class="application-form__form-input email-input" type="email" name="email" placeholder="kuklachev@gmail.com">
         </label>
         <label class="application-form__form-label">
           Телефон:*
@@ -109,8 +109,7 @@
           Дополнительно
         </h3>
         <label class="application-form__checkbox-label">
-          <input class="application-form__checkbox-input" type="checkbox" name="added-products" value="sweetener"
-                 checked>
+          <input class="application-form__checkbox-input" type="checkbox" name="added-products" value="sweetener" checked>
           сахарозаменитель
         </label>
         <label class="application-form__checkbox-label">
@@ -129,6 +128,9 @@
       <button class="application-form__button button" type="submit">
         Отправить заявку
       </button>
+      <small class="application-form__note">
+        * — Обязательные поля
+      </small>
     </form>
   </section>
   <section class="location">
@@ -151,23 +153,29 @@
   </section>
 </main>
 <footer class="page-footer">
-  <a class="page-footer__logo-cat-energy logo-title" href="#">
-    <img class="logo-title__image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
+  <a class="page-footer__logo-cat-energy" href="#">
+    <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
   </a>
   <ul class="page-footer__social-list social-list">
     <li class="social-list__item">
       <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
-        Vkontakte
+        <span class="visually-hidden">
+          Vkontakte.
+        </span>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-        YouTube
+        <span class="visually-hidden">
+          YouTube.
+        </span>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
-        Telegram
+        <span class="visually-hidden">
+          Telegram.
+        </span>
       </a>
     </li>
   </ul>
