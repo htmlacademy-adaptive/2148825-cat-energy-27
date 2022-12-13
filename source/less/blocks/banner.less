@@ -1,19 +1,30 @@
 .banner {
-  height: 302px;
   margin-bottom: 178px; /* Правда, получается, что элемент толкает сам себя */
-  padding: 27px 20px 0;
+  padding-top: 27px;
+  position: relative;
 
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   color: @white;
 
-  background-color: @green;
   background-image: url("../img/banner-background.jpg");
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 302px 302px;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 302px;
+    background-color: @green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .banner__title {
