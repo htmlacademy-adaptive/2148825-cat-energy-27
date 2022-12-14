@@ -2,47 +2,37 @@
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/lato/Lato-Regular.woff") format("woff");
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../fonts/lato/Lato-Regular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff") format("woff");
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../fonts/oswald/oswaldregular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
+  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2"), url("../fonts/oswald/oswaldmedium.woff") format("woff");
   font-display: swap;
 }
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/oswald/oswaldmedium.woff") format("woff");
-  font-display: swap;
+.container {
+  padding: 0 20px;
+}
+body {
+  background-color: #ffffff;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #444444;
 }
 .main-header {
   background-color: #ffffff;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
@@ -66,39 +56,41 @@
   text-decoration: none;
   text-align: center;
 }
-.main-container {
-  background-color: #ffffff;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #444444;
-}
 .main-container__title {
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
   color: #000000;
   text-transform: none;
-  padding: 27px 20px 40px;
+  padding-top: 27px 20px 40px;
 }
 .banner {
-  height: 302px;
   margin-bottom: 178px;
   /* Правда, получается, что элемент толкает сам себя */
-  padding: 27px 20px 0;
-  font-family: "Oswald", sans-serif;
+  padding-top: 27px;
+  position: relative;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   color: #ffffff;
-  background-color: #68b738;
   background-image: url("../img/banner-background.jpg");
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 302px 302px;
+}
+.banner::before {
+  content: "";
+  display: block;
+  height: 302px;
+  background-color: #68b738;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
 }
 .banner__title {
   margin-bottom: 25px;
@@ -120,7 +112,7 @@
   display: block;
   padding: 14px 26px;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -131,9 +123,6 @@
   background-color: #68b738;
   outline: inherit;
   cursor: pointer;
-}
-.approaches {
-  padding: 0 20px;
 }
 .approaches__list {
   list-style-type: none;
@@ -147,7 +136,7 @@
 }
 .approaches__title {
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
@@ -165,18 +154,18 @@
   padding-top: 15px;
   margin: 0;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: #000000;
   text-transform: uppercase;
 }
 .principles-of-work {
-  padding: 0 20px 30px;
+  padding-bottom: 30px;
 }
 .principles-of-work__title {
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -194,12 +183,13 @@
   margin-bottom: 20px;
 }
 .live-example {
-  padding: 25px 20px 30px;
+  padding-top: 25px;
+  padding-bottom: 30px;
   background-color: #eaeaea;
 }
 .live-example__title {
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -221,7 +211,7 @@
   margin-bottom: 20px;
 }
 .estimate__price {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -229,7 +219,7 @@
   text-transform: uppercase;
 }
 .estimate-item__value {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -244,10 +234,11 @@
   text-align: center;
 }
 .location__wrapper {
-  padding: 26px 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 .location__invitation {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -258,8 +249,9 @@
   font-style: normal;
 }
 .application-form {
-  padding: 27px 20px 32px;
-  font-family: "Oswald", sans-serif;
+  padding-top: 27px;
+  padding-bottom: 32px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -268,7 +260,7 @@
 }
 .application-form__main-title {
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -281,8 +273,19 @@
   color: #000000;
   margin-bottom: 38px;
 }
+.application-form__personal {
+  margin: 0;
+  padding-bottom: 24px;
+  border: none;
+}
+.application-form__form-input {
+  font: inherit;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+}
 .application-form__form-input::placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -290,7 +293,25 @@
   text-transform: uppercase;
   opacity: 1;
 }
+.application-form__radio {
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  border: none;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.application-form__contacts {
+  margin: 0;
+  padding-top: 26px;
+  padding-bottom: 24px;
+  border: none;
+}
+.application-form__comment {
+  padding-bottom: 23px;
+}
 .application-form__title {
+  margin-bottom: 35px;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
@@ -298,19 +319,24 @@
   text-transform: none;
 }
 .application-form__textarea {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
 }
+.application-form__checkbox {
+  margin: 0;
+  padding-bottom: 34px;
+  border: none;
+}
 .application-form__checkbox-label {
   color: #000000;
 }
 .application-form__note {
   display: block;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   color: #000000;
@@ -328,7 +354,7 @@
   display: block;
   margin: 0;
   margin-bottom: 18px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -345,7 +371,7 @@
 .show-more-card__title {
   margin: 0;
   margin-bottom: 8px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -364,7 +390,7 @@
   display: block;
   padding: 10px 30px;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -377,12 +403,13 @@
   cursor: pointer;
 }
 .additional-products {
-  padding: 25px 20px 35px;
+  padding-top: 25px;
+  padding-bottom: 35px;
 }
 .additional-products__title {
   margin: 0;
   margin-bottom: 36px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -398,7 +425,7 @@
   line-height: 20px;
   color: #ffffff;
   text-align: center;
-  background-color: #68b738;
+  background-color: rgba(104, 183, 56, 0.85);
   background-image: url("../img/gift-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -414,7 +441,7 @@
 .additional-product-card__title {
   margin: 0;
   margin-bottom: 14px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -434,12 +461,10 @@
   padding: 0;
 }
 .page-footer {
-  padding: 40px 20px 22px;
-  font-family: "Lato", sans-serif;
+  padding-top: 40px;
+  padding-bottom: 22px;
   font-size: 16px;
-  font-weight: 400;
   line-height: 20px;
-  color: #444444;
   background-color: #f2f2f2;
 }
 .page-footer__logo-cat-energy {

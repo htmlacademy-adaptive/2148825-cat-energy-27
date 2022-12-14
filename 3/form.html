@@ -40,14 +40,14 @@
 </header>
 <main class="main-container">
   <section class="application-form">
-    <h1 class="application-form__main-title">
+    <h1 class="application-form__main-title container">
       Подбор программы
     </h1>
-    <p class="application-form__paragraph">
+    <p class="application-form__paragraph container">
       Заполните анкету, и мы подберем программу питания для вашего кота
     </p>
     <form class="application-form__form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="application-form__personal">
+      <fieldset class="application-form__personal container">
         <legend class="visually-hidden">
           Персональные данные.
         </legend>
@@ -64,7 +64,7 @@
           <input class="application-form__form-input" type="number" name="age" placeholder="7">
         </label>
       </fieldset>
-      <fieldset class="application-form__radio">
+      <fieldset class="application-form__radio container">
         <legend class="visually-hidden">
           Желаемые цели.
         </legend>
@@ -81,7 +81,7 @@
           Не знаю (Нужен ваш совет)
         </label>
       </fieldset>
-      <fieldset class="application-form__contacts">
+      <fieldset class="application-form__contacts container">
         <h3 class="application-form__title">
           Контактные данные (владельца кота)
         </h3>
@@ -94,7 +94,7 @@
           <input class="application-form__form-input tel-input" type="tel" name="tel" placeholder="8 (960) 900-60-90">
         </label>
       </fieldset>
-      <div>
+      <div class="application-form__comment container">
         <h3 class="application-form__title">
           Комментарий
         </h3>
@@ -105,7 +105,7 @@
           Расскажите обо всех повадках кота
         </textarea>
       </div>
-      <fieldset class="application-form__checkbox">
+      <fieldset class="application-form__checkbox container">
         <h3 class="application-form__title">
           Дополнительно
         </h3>
@@ -126,19 +126,21 @@
           витамины
         </label>
       </fieldset>
+      <div class="container"> <!--Не знаю, можно ли так с точки зрения БЭМ-->
       <button class="application-form__button button" type="submit">
         Отправить заявку
       </button>
       <small class="application-form__note">
         * — Обязательные поля
       </small>
+      </div>
     </form>
   </section>
   <section class="location">
     <h2 class="visually-hidden">
       Как до нас добраться.
     </h2>
-    <div class="location__wrapper">
+    <div class="location__wrapper container">
       <p class="location__invitation">
         Приглашаем к сотрудничеству дилеров!
       </p>
@@ -153,7 +155,7 @@
     <img class="location__image" src="img/map.jpg" width="320" height="362" alt="Карта расположения Cat Energy">
   </section>
 </main>
-<footer class="page-footer">
+<footer class="page-footer container">
   <a class="page-footer__logo-cat-energy" href="#">
     <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
   </a>
