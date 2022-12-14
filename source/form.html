@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Cat Energy</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -38,14 +39,14 @@
 </header>
 <main class="main-container">
   <section class="application-form">
-    <h1 class="application-form__main-title">
+    <h1 class="application-form__main-title container">
       Подбор программы
     </h1>
-    <p class="application-form__paragraph">
+    <p class="application-form__paragraph container">
       Заполните анкету, и мы подберем программу питания для вашего кота
     </p>
     <form class="application-form__form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="application-form__personal">
+      <fieldset class="application-form__personal container">
         <legend class="visually-hidden">
           Персональные данные.
         </legend>
@@ -62,7 +63,7 @@
           <input class="application-form__form-input" type="number" name="age" placeholder="7">
         </label>
       </fieldset>
-      <fieldset class="application-form__radio">
+      <fieldset class="application-form__radio container">
         <legend class="visually-hidden">
           Желаемые цели.
         </legend>
@@ -79,21 +80,20 @@
           Не знаю (Нужен ваш совет)
         </label>
       </fieldset>
-      <fieldset class="application-form__contacts">
+      <fieldset class="application-form__contacts container">
         <h3 class="application-form__title">
           Контактные данные (владельца кота)
         </h3>
         <label class="application-form__form-label">
           E-mail:*
-          <input class="application-form__form-input email-input" type="email" name="email"
-                 placeholder="kuklachev@gmail.com">
+          <input class="application-form__form-input email-input" type="email" name="email" placeholder="kuklachev@gmail.com">
         </label>
         <label class="application-form__form-label">
           Телефон:*
           <input class="application-form__form-input tel-input" type="tel" name="tel" placeholder="8 (960) 900-60-90">
         </label>
       </fieldset>
-      <div>
+      <div class="application-form__comment container">
         <h3 class="application-form__title">
           Комментарий
         </h3>
@@ -104,13 +104,12 @@
           Расскажите обо всех повадках кота
         </textarea>
       </div>
-      <fieldset class="application-form__checkbox">
+      <fieldset class="application-form__checkbox container">
         <h3 class="application-form__title">
           Дополнительно
         </h3>
         <label class="application-form__checkbox-label">
-          <input class="application-form__checkbox-input" type="checkbox" name="added-products" value="sweetener"
-                 checked>
+          <input class="application-form__checkbox-input" type="checkbox" name="added-products" value="sweetener" checked>
           сахарозаменитель
         </label>
         <label class="application-form__checkbox-label">
@@ -126,16 +125,21 @@
           витамины
         </label>
       </fieldset>
+      <div class="container"> <!--Не знаю, можно ли так с точки зрения БЭМ-->
       <button class="application-form__button button" type="submit">
         Отправить заявку
       </button>
+      <small class="application-form__note">
+        * — Обязательные поля
+      </small>
+      </div>
     </form>
   </section>
   <section class="location">
     <h2 class="visually-hidden">
       Как до нас добраться.
     </h2>
-    <div class="location__wrapper">
+    <div class="location__wrapper container">
       <p class="location__invitation">
         Приглашаем к сотрудничеству дилеров!
       </p>
@@ -150,24 +154,30 @@
     <img class="location__image" src="img/map.jpg" width="320" height="362" alt="Карта расположения Cat Energy">
   </section>
 </main>
-<footer class="page-footer">
-  <a class="page-footer__logo-cat-energy logo-title" href="#">
-    <img class="logo-title__image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
+<footer class="page-footer container">
+  <a class="page-footer__logo-cat-energy" href="#">
+    <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
   </a>
   <ul class="page-footer__social-list social-list">
     <li class="social-list__item">
       <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
-        Vkontakte
+        <span class="visually-hidden">
+          Vkontakte.
+        </span>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-        YouTube
+        <span class="visually-hidden">
+          YouTube.
+        </span>
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
-        Telegram
+        <span class="visually-hidden">
+          Telegram.
+        </span>
       </a>
     </li>
   </ul>
