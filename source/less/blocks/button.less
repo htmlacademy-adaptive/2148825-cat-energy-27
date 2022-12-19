@@ -1,6 +1,6 @@
 .button {
   display: block;
-  padding: 14px 26px;
+  padding: 7px 26px;
 
   text-decoration: none;
   font-family: "Oswald", "Arial", sans-serif;
@@ -16,4 +16,8 @@
   outline: inherit;
 
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 26px;
+  }
 }

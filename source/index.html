@@ -2,16 +2,15 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
-<header class="main-header">
-  <div class="main-header__logo-wrapper">
+<header class="main-header container">
     <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image" src="img/logo-cat-energy-image.svg" width="191" height="38" alt="">
+      <img class="main-header__logo-image" src="img/logo-cat-energy-image.svg" width="191" height="38" alt="Логотип Cat Energy">
     </a>
-  </div>
   <nav class="main-header__nav main-nav">
     <button class="main-nav__toggle">
         <span class="visually-hidden">
@@ -19,18 +18,18 @@
         </span>
     </button>
     <ul class="main-nav__list navigation-list">
-      <li class="navigation-list__item navigation-list__item--current">
-        <a class="navigation-list__link" href="#">
+      <li class="navigation-list__item">
+        <a class="navigation-list__link navigation-list__link--index navigation-list__link--current navigation-list__link--index--current" href="#">
           Главная
         </a>
       </li>
       <li class="navigation-list__item">
-        <a class="navigation-list__link" href="catalog.html">
+        <a class="navigation-list__link navigation-list__link--index" href="catalog.html">
           Каталог продукции
         </a>
       </li>
       <li class="navigation-list__item">
-        <a class="navigation-list__link" href="form.html">
+        <a class="navigation-list__link navigation-list__link--index" href="form.html">
           Подбор программы
         </a>
       </li>
@@ -42,6 +41,7 @@
     Интернет-магазин фитнес еды для котиков "Cat energy".
   </h1>
   <section class="banner container">
+    <div class="banner__wrapper">
     <h2 class="banner__title">
       Функциональное питание для котов
     </h2>
@@ -52,9 +52,9 @@
     <a class="banner__button button" href="form.html">
       Подобрать программу
     </a>
+    </div>
   </section>
-  <div class="container">
-  <section class="approaches">
+  <section class="approaches container">
     <h2 class="visually-hidden">
       Подходы к питанию.
     </h2>
@@ -85,7 +85,7 @@
       </li>
     </ul>
   </section>
-  <section class="principles-of-work">
+  <section class="principles-of-work container">
     <h2 class="principles-of-work__title">
       Как это работает
     </h2>
@@ -112,8 +112,8 @@
       </li>
     </ul>
   </section>
-  </div>
   <section class="live-example container">
+    <div class="live-example__text-wrapper">
     <h2 class="live-example__title">
       Живой пример
     </h2>
@@ -144,6 +144,7 @@
         Затраты на питание: 15 000 РУБ.
       </p>
     </div>
+    </div>
     <div class="live-example__slider before-after">
       <img class="before-after__image-before" src="img/example-before.png" width="280" height="256" alt="Фото кота до питания кормом cat-energy">
       <img class="before-after__image-after" src="img/example-after.png" width="280" height="256" alt="Фото кота после питания кормом cat-energy, теперь он выглядит более стройным">
@@ -153,12 +154,13 @@
     <h2 class="visually-hidden">
       Как до нас добраться.
     </h2>
-    <div class="location__wrapper container">
+    <div class="location__wrapper location__wrapper--index container">
       <p class="location__invitation">
         Приглашаем к сотрудничеству дилеров!
       </p>
       <address class="location__address address-text">
-        <p class="address-text__paragraph"> ул. Большая Конюшенная, д. 19/8
+        <p class="address-text__paragraph">
+          ул. Большая Конюшенная, д. 19/8
         </p>
         <p class="address-text__paragraph">
           Санкт-Петербург

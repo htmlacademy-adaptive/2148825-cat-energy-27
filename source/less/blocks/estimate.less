@@ -1,13 +1,37 @@
 .estimate {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 
 .estimate__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 42px;
+    margin-bottom: 0;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .estimate__item {
   margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .estimate__price {
@@ -17,4 +41,5 @@
   line-height: 20px;
   color: @black;
   text-transform: uppercase;
+  text-align: center;
 }

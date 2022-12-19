@@ -5,6 +5,14 @@
   &--first {
   border-top: 1px solid @gray-5;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0 17px;
+  }
 }
 
 .additional-product-card__title {
@@ -17,6 +25,10 @@
   line-height: 16px;
   color: @light-black;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-product-card__properties {
@@ -26,6 +38,11 @@
   padding: 0;
 
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .additional-product-card__amount {

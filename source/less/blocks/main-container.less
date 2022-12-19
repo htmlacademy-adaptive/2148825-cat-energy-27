@@ -5,5 +5,16 @@
 .main-container__title {
   .title-typical;
 
-  padding-top: 27px 20px 40px;
+  padding: 27px 20px 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 30px 82px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 45px 110px 163px;
+  }
 }

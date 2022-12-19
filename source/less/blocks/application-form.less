@@ -13,29 +13,72 @@
 .application-form__main-title {
   .title-typical;
   margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .application-form__paragraph {
   font-size: 14px;
   color: @black;
   margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 66px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.application-form__wrapper {
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .application-form__personal {
   margin: 0;
   padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .application-form__form-label {
-
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .application-form__form-input {
+  padding: 14px 15px;
+
   font: inherit;
   line-height: 18px;
   color: @dark-gray;
   text-transform: uppercase;
+
+  border: 1px solid @gray-5;
 
   &::placeholder {
     font-family: "Oswald", "Arial", sans-serif;
@@ -45,20 +88,54 @@
     color: @dark-gray;
     text-transform: uppercase;
     opacity: 1;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.application-form__radio-wrapper {
+  border-top: 1px solid @gray;
+  border-bottom: 1px solid @gray;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 71px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
   }
 }
 
 .application-form__radio {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
   margin: 0;
   padding-top: 22px;
   padding-bottom: 19px;
+
   border: none;
-  border-top: 1px solid @gray;
-  border-bottom: 1px solid @gray;
+  @media (min-width: @tablet-width) {
+    border: 1px solid @gray;
+    padding: 25px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
-.application-form__radio-label {
 
+.application-form__radio-label {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .application-form__radio-input {
@@ -66,10 +143,20 @@
 }
 
 .application-form__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin: 0;
   padding-top: 26px;
   padding-bottom: 24px;
+
   border: none;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .application-form__comment {
@@ -78,39 +165,89 @@
 
 .application-form__title {
   margin-bottom: 35px;
+  grid-column: 1 / -1;
 
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: @black;
   text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &--checkbox {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 54px;
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .application-form__textarea {
+  width: 100%;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
   color: @dark-gray;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .application-form__checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
   margin: 0;
   padding-bottom: 34px;
   border: none;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 54px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .grid-desktop;
+  }
 }
 
 .application-form__checkbox-label {
   color: @black;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .application-form__checkbox-input {
 
 }
 
-.application-form__button {
+.application-form__footer-wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}
 
+.application-form__button {
+  width: 100%;
+  margin-bottom: 21px;
 }
 
 .application-form__note {
@@ -122,4 +259,9 @@
   color: @black;
   text-transform: none;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    text-align: left;
+  }
 }
