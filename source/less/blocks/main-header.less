@@ -1,4 +1,6 @@
 .main-header {
+  .container;
+  padding: 0;
   display: flex;
   flex-direction: column;
   background-color: @white;
@@ -31,13 +33,16 @@
   }
 }
 
-.main-header__logo {
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 18px;
+.main-header__wrapper {
+    padding: 10px 20px 17px;
+    display: flex;
   @media (min-width: @tablet-width) {
     padding: 0;
   }
+}
+
+.main-header__logo {
+  display: block;
 }
 
 .main-header__logo-image {
@@ -56,7 +61,15 @@
   }
 }
 
+.main-header__toggle {
+  margin-left: auto;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-header__nav {
 
 }
+
 

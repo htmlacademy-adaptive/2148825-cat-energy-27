@@ -1,8 +1,6 @@
 .page-footer {
   padding-top: 40px;
   padding-bottom: 22px;
-  display: flex;
-  flex-direction: column;
 
   font-size: 16px;
   line-height: 20px;
@@ -12,6 +10,17 @@
   @media (min-width: @tablet-width) {
     padding-top: 58px;
     padding-bottom: 55px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

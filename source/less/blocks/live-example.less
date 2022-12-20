@@ -2,8 +2,7 @@
   padding-top: 25px;
   padding-bottom: 40px;
   position: relative;
-  display: flex;
-  flex-direction: column;
+
 
   background-color: @gray-3;
 
@@ -25,10 +24,17 @@
 
     @media (min-width: @desktop-width) {
       padding-bottom: 75px;
-
-      flex-direction: row;
-      justify-content: space-between;
     }
+  }
+}
+
+.live-example__container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
