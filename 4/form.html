@@ -9,16 +9,18 @@
 </head>
 <body class="page__body">
 <header class="main-header container">
-  <a class="main-header__logo" href="#">
-    <img class="main-header__logo-image" src="img/logo-cat-energy-image.svg" width="191" height="38" alt="Логотип Cat Energy">
-  </a>
-  <nav class="main-header__nav main-nav">
-    <button class="main-nav__toggle">
+  <div class="main-header__wrapper">
+    <a class="main-header__logo" href="#">
+      <img class="main-header__logo-image" src="img/logo-cat-energy-image.svg" width="191" height="38" alt="Логотип Cat Energy">
+    </a>
+    <button class="main-header__toggle">
         <span class="visually-hidden">
           Открыть меню.
         </span>
     </button>
-    <ul class="main-nav__list navigation-list">
+  </div>
+  <nav class="main-header__nav">
+    <ul class="main-header__list navigation-list">
       <li class="navigation-list__item">
         <a class="navigation-list__link" href="index.html">
           Главная
@@ -129,7 +131,7 @@
           витамины
         </label>
       </fieldset>
-      <div class="application-form__footer-wrapper container--form"> <!--Не знаю, можно ли так с точки зрения БЭМ-->
+      <div class="application-form__footer-wrapper container--form">
         <button class="application-form__button button" type="submit">
           Отправить заявку
         </button>
@@ -159,40 +161,42 @@
     <img class="location__image" src="img/map.jpg" width="320" height="362" alt="Карта расположения Cat Energy">
   </section>
 </main>
-<footer class="page-footer container">
-  <a class="page-footer__logo-cat-energy" href="#">
-    <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
-  </a>
-  <ul class="page-footer__social-list social-list">
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
+<footer class="page-footer">
+  <div class="page-footer__container container">
+    <a class="page-footer__logo-cat-energy" href="#">
+      <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
+    </a>
+    <ul class="page-footer__social-list social-list">
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
         <span class="visually-hidden">
           Vkontakte.
         </span>
-      </a>
-    </li>
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
         <span class="visually-hidden">
           YouTube.
         </span>
-      </a>
-    </li>
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
         <span class="visually-hidden">
           Telegram.
         </span>
+        </a>
+      </li>
+    </ul>
+    <div class="page-footer__html-academy-logo-wrapper">
+      <a class="page-footer__html-academy-logo-text" href="https://htmlacademy.ru">
+        HTML Academy
       </a>
-    </li>
-  </ul>
-  <div class="page-footer__html-academy-logo-wrapper">
-    <a class="page-footer__html-academy-logo-text" href="https://htmlacademy.ru">
-      HTML Academy
-    </a>
-    <a class="page-footer__html-academy-logo" href="https://htmlacademy.ru">
-      <img class="page-footer__html-academy-logo-image" src="img/html-academy-logo.svg" width="27" height="34" alt="">
-    </a>
+      <a class="page-footer__html-academy-logo" href="https://htmlacademy.ru">
+        <img class="page-footer__html-academy-logo-image" src="img/html-academy-logo.svg" width="27" height="34" alt="">
+      </a>
+    </div>
   </div>
 </footer>
 </body>
