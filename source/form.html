@@ -2,23 +2,24 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
-<header class="main-header">
-  <div class="main-header__logo-wrapper">
+<header class="main-header container">
+  <div class="main-header__wrapper">
     <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image" src="img/logo-cat-energy-image.svg" width="191" height="38" alt="">
+      <img class="main-header__logo-image" src="img/logo-cat-energy-image.svg" width="191" height="38" alt="Логотип Cat Energy">
     </a>
-  </div>
-  <nav class="main-header__nav main-nav">
-    <button class="main-nav__toggle">
+    <button class="main-header__toggle">
         <span class="visually-hidden">
           Открыть меню.
         </span>
     </button>
-    <ul class="main-nav__list navigation-list">
+  </div>
+  <nav class="main-header__nav">
+    <ul class="main-header__list navigation-list">
       <li class="navigation-list__item">
         <a class="navigation-list__link" href="index.html">
           Главная
@@ -29,8 +30,8 @@
           Каталог продукции
         </a>
       </li>
-      <li class="navigation-list__item navigation-list__item--current">
-        <a class="navigation-list__link" href="#">
+      <li class="navigation-list__item">
+        <a class="navigation-list__link navigation-list__link--current" href="#">
           Подбор программы
         </a>
       </li>
@@ -39,48 +40,52 @@
 </header>
 <main class="main-container">
   <section class="application-form">
-    <h1 class="application-form__main-title container">
+    <h1 class="application-form__main-title container--form">
       Подбор программы
     </h1>
-    <p class="application-form__paragraph container">
+    <p class="application-form__paragraph container--form">
       Заполните анкету, и мы подберем программу питания для вашего кота
     </p>
     <form class="application-form__form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="application-form__personal container">
-        <legend class="visually-hidden">
-          Персональные данные.
-        </legend>
-        <label class="application-form__form-label">
-          Имя:*
-          <input class="application-form__form-input" type="text" name="name" placeholder="Барсик">
-        </label>
-        <label class="application-form__form-label">
-          Вес (кг):*
-          <input class="application-form__form-input" type="number" name="weight" placeholder="7">
-        </label>
-        <label class="application-form__form-label">
-          Возраст (лет):
-          <input class="application-form__form-input" type="number" name="age" placeholder="7">
-        </label>
-      </fieldset>
-      <fieldset class="application-form__radio container">
-        <legend class="visually-hidden">
-          Желаемые цели.
-        </legend>
-        <label class="application-form__radio-label">
-          <input class="application-form__radio-input" type="radio" name="target" value="weight loss" checked>
-          Похудение
-        </label>
-        <label class="application-form__radio-label">
-          <input class="application-form__radio-input" type="radio" name="target" value="weight gain">
-          Набор массы
-        </label>
-        <label class="application-form__radio-label">
-          <input class="application-form__radio-input" type="radio" name="target" value="unknown">
-          Не знаю (Нужен ваш совет)
-        </label>
-      </fieldset>
-      <fieldset class="application-form__contacts container">
+      <div class="application-form__wrapper">
+        <fieldset class="application-form__personal container--form">
+          <legend class="visually-hidden">
+            Персональные данные.
+          </legend>
+          <label class="application-form__form-label">
+            Имя:*
+            <input class="application-form__form-input" type="text" name="name" placeholder="Барсик">
+          </label>
+          <label class="application-form__form-label">
+            Вес (кг):*
+            <input class="application-form__form-input" type="number" name="weight" placeholder="7">
+          </label>
+          <label class="application-form__form-label">
+            Возраст (лет):
+            <input class="application-form__form-input" type="number" name="age" placeholder="7">
+          </label>
+        </fieldset>
+        <div class="application-form__radio-wrapper container--form">
+          <fieldset class="application-form__radio ">
+            <legend class="visually-hidden">
+              Желаемые цели.
+            </legend>
+            <label class="application-form__radio-label">
+              <input class="application-form__radio-input" type="radio" name="target" value="weight loss" checked>
+              Похудение
+            </label>
+            <label class="application-form__radio-label">
+              <input class="application-form__radio-input" type="radio" name="target" value="weight gain">
+              Набор массы
+            </label>
+            <label class="application-form__radio-label">
+              <input class="application-form__radio-input" type="radio" name="target" value="unknown">
+              Не знаю (Нужен ваш совет)
+            </label>
+          </fieldset>
+        </div>
+      </div>
+      <fieldset class="application-form__contacts container--form">
         <h3 class="application-form__title">
           Контактные данные (владельца кота)
         </h3>
@@ -93,7 +98,7 @@
           <input class="application-form__form-input tel-input" type="tel" name="tel" placeholder="8 (960) 900-60-90">
         </label>
       </fieldset>
-      <div class="application-form__comment container">
+      <div class="application-form__comment container--form">
         <h3 class="application-form__title">
           Комментарий
         </h3>
@@ -104,8 +109,8 @@
           Расскажите обо всех повадках кота
         </textarea>
       </div>
-      <fieldset class="application-form__checkbox container">
-        <h3 class="application-form__title">
+      <fieldset class="application-form__checkbox container--form">
+        <h3 class="application-form__title application-form__title--checkbox">
           Дополнительно
         </h3>
         <label class="application-form__checkbox-label">
@@ -125,13 +130,13 @@
           витамины
         </label>
       </fieldset>
-      <div class="container"> <!--Не знаю, можно ли так с точки зрения БЭМ-->
-      <button class="application-form__button button" type="submit">
-        Отправить заявку
-      </button>
-      <small class="application-form__note">
-        * — Обязательные поля
-      </small>
+      <div class="application-form__footer-wrapper container--form">
+        <button class="application-form__button button" type="submit">
+          Отправить заявку
+        </button>
+        <small class="application-form__note">
+          * — Обязательные поля
+        </small>
       </div>
     </form>
   </section>
@@ -144,7 +149,8 @@
         Приглашаем к сотрудничеству дилеров!
       </p>
       <address class="location__address address-text">
-        <p class="address-text__paragraph"> ул. Большая Конюшенная, д. 19/8
+        <p class="address-text__paragraph">
+          ул. Большая Конюшенная, д. 19/8
         </p>
         <p class="address-text__paragraph">
           Санкт-Петербург
@@ -154,40 +160,42 @@
     <img class="location__image" src="img/map.jpg" width="320" height="362" alt="Карта расположения Cat Energy">
   </section>
 </main>
-<footer class="page-footer container">
-  <a class="page-footer__logo-cat-energy" href="#">
-    <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
-  </a>
-  <ul class="page-footer__social-list social-list">
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
+<footer class="page-footer">
+  <div class="page-footer__container container">
+    <a class="page-footer__logo-cat-energy" href="#">
+      <img class="page-footer__logo-cat-energy-image" src="img/logo-cat-energy-title.svg" width="101" height="18" alt="Cat Energy">
+    </a>
+    <ul class="page-footer__social-list social-list">
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
         <span class="visually-hidden">
           Vkontakte.
         </span>
-      </a>
-    </li>
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
         <span class="visually-hidden">
           YouTube.
         </span>
-      </a>
-    </li>
-    <li class="social-list__item">
-      <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
         <span class="visually-hidden">
           Telegram.
         </span>
+        </a>
+      </li>
+    </ul>
+    <div class="page-footer__html-academy-logo-wrapper">
+      <a class="page-footer__html-academy-logo-text" href="https://htmlacademy.ru">
+        HTML Academy
       </a>
-    </li>
-  </ul>
-  <div class="page-footer__html-academy-logo-wrapper">
-    <a class="page-footer__html-academy-logo-text" href="https://htmlacademy.ru">
-      HTML Academy
-    </a>
-    <a class="page-footer__html-academy-logo" href="https://htmlacademy.ru">
-      <img class="page-footer__html-academy-logo-image" src="img/html-academy-logo.svg" width="27" height="34" alt="">
-    </a>
+      <a class="page-footer__html-academy-logo" href="https://htmlacademy.ru">
+        <img class="page-footer__html-academy-logo-image" src="img/html-academy-logo.svg" width="27" height="34" alt="">
+      </a>
+    </div>
   </div>
 </footer>
 </body>

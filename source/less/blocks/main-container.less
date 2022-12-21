@@ -5,5 +5,20 @@
 .main-container__title {
   .title-typical;
 
-  padding-top: 27px 20px 40px;
+  padding: 0 20px;
+  max-width: @desktop-width;
+  margin: 27px auto 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 64px auto 82px;
+    padding: 0 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 45px auto 163px;
+    padding: 0 110px;
+  }
 }
