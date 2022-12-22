@@ -1,5 +1,5 @@
 .link-accent {
-  display: block;
+  display: flex;
   padding-top: 15px;
   margin: 0;
 
@@ -9,4 +9,17 @@
   line-height: 16px;
   color: @black;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    width: 32px;
+    height: 10px;
+    margin: auto;
+    margin-left: 15px;
+    background-image: url("../img/icon-arrow.svg");
+
+    @media(min-width: @tablet-width) {
+      margin-left: 25px;
+    }
+  }
 }
