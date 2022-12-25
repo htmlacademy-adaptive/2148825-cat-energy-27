@@ -41,8 +41,12 @@
   color: @light-black;
   text-transform: uppercase;
   @media (min-width: @tablet-width) {
+    max-width: 50%;
     font-size: 20px;
     line-height: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: 25%;
   }
 }
 
@@ -86,5 +90,6 @@
 .additional-product-card__button {
   @media (min-width: @desktop-width) {
     width: 27%;
+    flex: none;
   }
 }
