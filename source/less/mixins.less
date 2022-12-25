@@ -10,6 +10,7 @@
 }
 
 .container {
+  display: block;
   padding: 0 20px;
   margin: 0 auto;
   max-width: @desktop-width;
@@ -26,6 +27,7 @@
 }
 
 .container--form {
+  display: block;
   padding: 0 20px;
   margin: 0 auto;
   max-width: @desktop-width;
@@ -47,7 +49,46 @@
   column-gap: 80px;
 }
 
-.be-center() {
+.triangle(@_; @size; @color) {
+  width: 0;
+  height: 0;
+  border: @size solid @color;
+}
+
+.triangle(right; @size; @color) {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-style: none;
+}
+
+.triangle(left; @size; @color) {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-style: none;
+}
+
+.fieldset-decoration() {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 13px;
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: @green;
+    z-index: -1;
+
+    @media(min-width: @tablet-width) {
+      width: 100%;
+      top: 19px;
+    }
+  }
+}
+
+.centered() {
+  display: block;
   position: absolute;
   margin: auto;
   top: 0;
@@ -67,4 +108,13 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+&:hover,
+&:focus {
+
+}
+
+&:active {
+
 }

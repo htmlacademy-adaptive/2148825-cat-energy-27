@@ -52,15 +52,98 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     max-width: 250px;
+    min-height: 280px;
+    padding-top: 34px;
+
+    background-repeat: no-repeat;
+    background-position: right 34px;
+  }
+
+  &--one {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/one.svg");
+      background-position: 118px 34px;
+    }
+  }
+
+  &--two {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/two.svg");
+      background-position: 111px 34px;
+    }
+  }
+
+  &--three {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/three.svg");
+    }
+  }
+
+  &--four {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/four.svg");
+    }
   }
 }
 
 .principles-of-work__description {
   margin: 0;
+  display: flex;
+  align-items: center;
+
   @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
     width: 245px;
 
     font-size: 16px;
     line-height: 24px;
+  }
+
+  &--nutrients {
+    &::before {
+      background-image: url("../img/icon-leaf.svg");
+      background-size: 30px 32px;
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../img/icon-drink.svg");
+      background-size: 27px 29px;
+    }
+  }
+
+  &--replacement {
+    &::before {
+      background-image: url("../img/icon-eat.svg");
+      background-size: 25px 30px;
+    }
+  }
+
+  &--period {
+    &::before {
+      background-image: url("../img/icon-clock.svg");
+      background-size: 26px 31px;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    flex: none;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-right: 0;
+      margin-bottom: 31px;
+    }
   }
 }
