@@ -41,6 +41,15 @@
     padding: 8px 0;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   &--current {
     @media (min-width: @tablet-width) {
       border-bottom: 2px solid @green;
@@ -52,6 +61,16 @@
   @media (min-width: @desktop-width) {
     color: @white;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   &--current {
     @media (min-width: @desktop-width) {
       border-bottom: 2px solid @white;

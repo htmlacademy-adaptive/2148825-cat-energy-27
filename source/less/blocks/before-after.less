@@ -57,13 +57,22 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 4px;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.before-after__toggle-line {
+  height: 100%;
+  width: 4px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: @gray-6;
   z-index: 2;
+  transform: translateX(-50%);
 }
 
 .before-after__toggle-button {
@@ -71,8 +80,54 @@
   padding: 20px;
   width: 40px;
   height: 40px;
-  background-color: @gray-6;
-  border: none;
+  position: relative;
+  background-color: @white;
+  border: 2px solid @gray-6;
   border-radius: 50%;
   cursor: pointer;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  &::before {
+    content: "";
+    .triangle(left; 9px; @gray-6);
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    bottom: 11px;
+  }
+
+  &::after {
+    content: "";
+    .triangle(right; 9px; @gray-6);
+    position: absolute;
+    top: 11px;
+    right: 8px;
+    bottom: 11px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: @green;
+  }
+
+  &:hover::before,
+  &:focus::before{
+    border-right-color: @green;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    border-left-color: @green;
+  }
+
+  &:hover + .before-after__toggle-line,
+  &:focus + .before-after__toggle-line {
+    background-color: @green;
+  }
+
+  &:active,
+  &:active + .before-after__toggle-line {
+    opacity: 60%;
+  }
 }

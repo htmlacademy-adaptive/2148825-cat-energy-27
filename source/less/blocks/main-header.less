@@ -12,6 +12,14 @@
   color: @black;
   text-transform: uppercase;
 
+  @media(max-width: @mobile-width-only) {
+    position: relative;
+
+    &--nojs {
+      position: static;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 24px;
     padding-bottom: 29px;
@@ -36,6 +44,7 @@
 .main-header__wrapper {
     padding: 10px 20px 17px;
     display: flex;
+    align-items: center;
   @media (min-width: @tablet-width) {
     padding: 0;
   }
@@ -43,6 +52,15 @@
 
 .main-header__logo {
   display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .main-header__logo-image {
@@ -63,13 +81,97 @@
 
 .main-header__toggle {
   margin-left: auto;
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   @media (min-width: @tablet-width) {
+    display: none;
+  }
+  &--opened {
+    height: 24px;
+    width: 24px;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      width: 24px;
+      height: 2px;
+      background-color: @black;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+/* Эти состояния сделала на своё усмотрение*/
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: @green;
+    }
+
+    &:active::before,
+    &:active::after {
+      opacity: 60%;
+    }
+  }
+  &--closed {
+    height: 20px;
+    width: 24px;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 24px;
+      height: 2px;
+      background-color: @black;
+      box-shadow: 0 7px 0 0 @black, 0 14px 0 0 @black;
+    }
+    &:hover::before,
+    &:focus::before {
+      background-color: @green;
+      box-shadow: 0 7px 0 0 @green, 0 14px 0 0 @green;
+    }
+    &:active::before {
+      opacity: 60%;
+    }
+  }
+
+  &--nojs {
     display: none;
   }
 }
 
 .main-header__nav {
+  &--nojs {
+    display: block;
+  }
+  @media (max-width: @mobile-width-only) {
+    background-color: @white;
 
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      top: 65px;
+    }
+  }
 }
 
 

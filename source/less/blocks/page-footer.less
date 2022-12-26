@@ -35,6 +35,15 @@
     padding: 0;
     border: none;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .page-footer__logo-cat-energy-image {
@@ -45,6 +54,7 @@
 .page-footer__social-list {
   padding: 20px;
   border-bottom: 1px solid @gray;
+
   @media (min-width: @tablet-width) {
     padding: 0;
     border: none;
@@ -68,10 +78,29 @@
   @media (min-width: @tablet-width) {
     margin-right: 23px;
   }
+
+  &:hover + .page-footer__html-academy-logo,
+  &:focus + .page-footer__html-academy-logo {
+    color: @green;
+  }
+
+  &:active,
+  &:active + .page-footer__html-academy-logo {
+    opacity: 30%;
+  }
 }
 
 .page-footer__html-academy-logo {
+  color: inherit;
 
+  &:hover,
+  &:focus {
+    color: @green;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .page-footer__html-academy-logo-image {
