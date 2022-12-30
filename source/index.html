@@ -4,13 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
 <header class="main-header main-header--nojs">
   <div class="main-header__wrapper">
     <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image" src="img/logo-cat-energy-image.svg" width="191" height="38" alt="Логотип Cat Energy">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-cat-energy-image-tablet.svg">
+        <img class="main-header__logo-image" src="img/logo-cat-energy-image-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+      </picture>
     </a>
     <button class="main-header__toggle main-header__toggle--closed main-header__toggle--nojs" type="button">
         <span class="visually-hidden">
@@ -50,7 +57,11 @@
       <p class="banner__slogan">
         Занялся собой? Займись котом!
       </p>
-      <img class="banner__image" src="img/can-image.png" width="280" height="270" alt="Оранжевая банка кошачьего корма с курицей">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/index-can-1x.png 1x, img/index-can-2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/can-tablet-1x.png 1x, img/can-tablet-2x.png 2x">
+        <img class="banner__image" src="img/can-mobile-1x.png" srcset="img/can-mobile-1x.png 2x" width="280" height="270" alt="Оранжевая банка кошачьего корма с курицей">
+      </picture>
       <a class="banner__button button" href="form.html">
         Подобрать программу
       </a>
@@ -150,10 +161,16 @@
       </div>
       <div class="live-example__slider before-after">
         <div class="before-after__wrapper before-after__wrapper--1">
-          <img class="before-after__image-before" src="img/example-before.png" width="280" height="256" alt="Фото кота до питания кормом cat-energy">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/before-desktop-1x.png 1x, img/before-desktop-2x.png 2x">
+            <img class="before-after__image-before" src="img/before-mobile-1x.png" srcset="img/before-mobile-2x.png" width="280" height="256" alt="Фото кота до питания кормом cat-energy">
+          </picture>
         </div>
         <div class="before-after__wrapper before-after__wrapper--2">
-          <img class="before-after__image-after" src="img/example-after.png" width="280" height="256" alt="Фото кота после питания кормом cat-energy, теперь он выглядит более стройным">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/after-desktop-1x.png 1x, img/after-desktop-2x.png 2x">
+            <img class="before-after__image-after" src="img/after-mobile-1x.png" srcset="img/after-mobile-2x.png" width="280" height="256" alt="Фото кота после питания кормом cat-energy, теперь он выглядит более стройным">
+          </picture>
         </div>
         <div class="before-after__toggle">
           <button class="before-after__toggle-button" type="button">
@@ -168,22 +185,24 @@
       Как до нас добраться.
     </h2>
     <div class="location__container">
-    <div class="location__wrapper location__wrapper--index container">
-      <p class="location__invitation">
-        Приглашаем к сотрудничеству дилеров!
-      </p>
-      <address class="location__address address-text">
-        <p class="address-text__paragraph">
-          ул. Большая Конюшенная, д. 19/8
+      <div class="location__wrapper location__wrapper--index container">
+        <p class="location__invitation">
+          Приглашаем к сотрудничеству дилеров!
         </p>
-        <p class="address-text__paragraph">
-          Санкт-Петербург
-        </p>
-      </address>
+        <address class="location__address address-text">
+          <p class="address-text__paragraph">
+            ул. Большая Конюшенная, д. 19/8
+          </p>
+          <p class="address-text__paragraph">
+            Санкт-Петербург
+          </p>
+        </address>
+      </div>
     </div>
-    </div>
-    <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197866!2d30.320472476852885!3d59.93871916209409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1671792798573!5m2!1sen!2sru" width="320" height="362" allowfullscreen title="Карта расположения Cat Energy"></iframe>
- </section>
+    <iframe class="location__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197866!2d30.320472476852885!3d59.93871916209409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1671792798573!5m2!1sen!2sru"
+            width="320" height="362" allowfullscreen title="Карта расположения Cat Energy"></iframe>
+  </section>
 </main>
 <footer class="page-footer">
   <div class="page-footer__container container">
