@@ -92,13 +92,27 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-background-2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
+    background-image: url("../img/gift-background-tablet.jpg");
     padding: 71px 124px 69px 422px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-background-tablet-2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
+    background-image: url("../img/gift-background-desktop.jpg");
     padding: 187px 43px 42px 40px;
     grid-column: 4 / 5;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-background-desktop-2x.jpg");
+    }
   }
 
 

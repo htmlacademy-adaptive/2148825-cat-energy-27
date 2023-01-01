@@ -32,6 +32,10 @@
     left: 0;
     z-index: -1;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/banner-background-2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       display: none;
     }
@@ -41,8 +45,13 @@
       height: 694px;
       width: 50%;
       margin-left: 50%;
+      background-image: url("../img/banner-background-desktop.jpg");
       background-position: left;
-      background-size: contain;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/banner-background-desktop-2x.jpg");
+      }
     }
   }
 }
