@@ -42,19 +42,19 @@ const script = () => {
 }
 
 // Images
-const images = () => {
+ const images = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
 }
 
-const copyImages = () => {
+ const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(gulp.dest('build/img'));
 }
 
 // WebP
-const imagesWebP = () => {
+ const imagesWebP = () => {
   return gulp.src('source/img/*.{jpg,png}')
     .pipe(squoosh({
         webp: {}
@@ -64,13 +64,13 @@ const imagesWebP = () => {
 }
 
 // Svg
-const svgOmg = () => {
+ const svgOmg = () => {
   return gulp.src('source/img/*.svg', '!source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
-const sprite = () => {
+ const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
@@ -81,7 +81,7 @@ const sprite = () => {
 }
 
 // Copy
-const copy = (done) => {
+ const copy = (done) => {
   gulp.src([
     'source/**/*.{woff2,woff}',
     'source/*.ico',
@@ -94,7 +94,7 @@ const copy = (done) => {
 }
 
 // Clean
-const clean = () => {
+ const clean = () => {
   return deleteAsync('build');
 };
 
