@@ -58,8 +58,11 @@
         Занялся собой? Займись котом!
       </p>
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/index-can-1x.webp 1x, img/index-can-2x.webp 2x">
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-1x.webp 1x, img/index-can-2x.webp 2x">
+        <source media="(min-width: 1440px)" srcset="img/index-can-1x.png 1x, img/index-can-2x.png 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/can-tablet-1x.webp 1x, img/can-tablet-2x.webp 2x">
         <source media="(min-width: 768px)" srcset="img/can-tablet-1x.png 1x, img/can-tablet-2x.png 2x">
+        <source type="image/webp" srcset="img/can-mobile-1x.webp 1x, img/can-mobile-2x.webp 2x">
         <img class="banner__image" src="img/can-mobile-1x.png" srcset="img/can-mobile-2x.png 2x" width="280" height="270" alt="Оранжевая банка кошачьего корма с курицей">
       </picture>
       <a class="banner__button button" href="form.html">
@@ -162,13 +165,17 @@
       <div class="live-example__slider before-after">
         <div class="before-after__wrapper before-after__wrapper--1">
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/before-desktop-1x.webp 1x, img/before-desktop-2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/before-desktop-1x.png 1x, img/before-desktop-2x.png 2x">
+            <source type="image/webp" srcset="img/before-mobile-1x.webp 1x, img/before-mobile-2x.webp 2x">
             <img class="before-after__image-before" src="img/before-mobile-1x.png" srcset="img/before-mobile-2x.png" width="280" height="256" alt="Фото кота до питания кормом cat-energy">
           </picture>
         </div>
         <div class="before-after__wrapper before-after__wrapper--2">
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/after-desktop-1x.webp 1x, img/after-desktop-2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/after-desktop-1x.png 1x, img/after-desktop-2x.png 2x">
+            <source type="image/webp" srcset="img/after-mobile-1x.webp 1x, img/after-mobile-2x.webp 2x">
             <img class="before-after__image-after" src="img/after-mobile-1x.png" srcset="img/after-mobile-2x.png" width="280" height="256" alt="Фото кота после питания кормом cat-energy, теперь он выглядит более стройным">
           </picture>
         </div>
