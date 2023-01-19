@@ -1,6 +1,6 @@
 .link-accent {
   display: flex;
-  padding-top: 15px;
+  padding-top: 18px;
   margin: 0;
 
   text-decoration: none;
@@ -9,6 +9,16 @@
   line-height: 16px;
   color: @black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    max-width: 340px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 
   &::after {
     content: "";

@@ -9,10 +9,12 @@
   color: @white;
 
   @media (min-width: @tablet-width) {
-      color: @black;
+    margin-bottom: 0;
+    color: @black;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
     position: static;
   }
 
@@ -62,19 +64,18 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    padding: 27px 117px 526px;
+    padding: 33px 117px 526px;
     position: relative;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 111px 190px 186px;
+    padding: 82px 190px 186px;
   }
 }
 
 .banner__title {
   margin: 0;
   margin-bottom: 25px;
-
   text-align: center;
   font-size: 36px;
   font-weight: 400;
@@ -96,7 +97,6 @@
 .banner__slogan {
   margin: 0;
   margin-bottom: 30px;
-
   text-align: center;
   text-transform: uppercase;
 
@@ -120,19 +120,17 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 234px;
-    right: 0;
+    right: 32px;
     order: 1;
     z-index: -1;
-
     width: 709px;
     height: auto;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    top: 32px;
+    top: 0;
     right: 330px;
-
     width: 552px;
     height: auto;
   }

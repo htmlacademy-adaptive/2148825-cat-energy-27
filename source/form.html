@@ -9,6 +9,9 @@
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="page__body">
 <header class="main-header main-header--nojs">
@@ -47,15 +50,15 @@
 </header>
 <main class="main-container">
   <section class="application-form">
-    <h1 class="application-form__main-title container--form">
+    <h1 class="application-form__main-title container-form">
       Подбор программы
     </h1>
-    <p class="application-form__paragraph container--form">
-      Заполните анкету, и мы подберем программу питания для вашего кота
+    <p class="application-form__paragraph container-form">
+      Заполните анкету, и мы подберем&nbsp;<br class="application-form__mobile-wrap"> программу питания для вашего кота
     </p>
     <form class="application-form__form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="application-form__wrapper">
-        <fieldset class="application-form__personal container--form">
+        <fieldset class="application-form__personal container-form">
           <legend class="visually-hidden">
             Персональные данные.
           </legend>
@@ -75,7 +78,7 @@
             <input class="application-form__form-input" type="number" name="age" placeholder="7">
           </label>
         </fieldset>
-        <div class="application-form__radio-wrapper container--form">
+        <div class="application-form__radio-wrapper container-form">
           <fieldset class="application-form__radio ">
             <legend class="visually-hidden">
               Желаемые цели.
@@ -103,7 +106,7 @@
         </div>
       </div>
       <div class="application-form__fieldset-wrapper">
-        <fieldset class="application-form__contacts container--form">
+        <fieldset class="application-form__contacts container-form">
           <div class="application-form__title-wrapper">
             <h3 class="application-form__title">
               Контактные данные (владельца кота)
@@ -128,8 +131,8 @@
         </fieldset>
       </div>
       <div class="application-form__fieldset-wrapper">
-        <div class="application-form__comment container--form">
-          <div class="application-form__title-wrapper">
+        <div class="application-form__comment container-form">
+          <div class="application-form__title-wrapper application-form__title-wrapper--comment">
             <h3 class="application-form__title">
               Комментарий
             </h3>
@@ -142,7 +145,7 @@
         </div>
       </div>
       <div class="application-form__fieldset-wrapper">
-        <fieldset class="application-form__checkbox container--form">
+        <fieldset class="application-form__checkbox container-form">
           <div class="application-form__title-wrapper application-form__title-wrapper--checkbox">
             <h3 class="application-form__title">
               Дополнительно
@@ -175,8 +178,8 @@
           </label>
         </fieldset>
       </div>
-      <div class="application-form__footer-wrapper container--form">
-        <button class="application-form__button button" type="submit">
+      <div class="application-form__footer-wrapper container-form">
+        <button class="application-form__button button button--form" type="submit">
           Отправить заявку
         </button>
         <small class="application-form__note">
@@ -192,7 +195,7 @@
     <div class="location__container">
       <div class="location__wrapper container">
         <p class="location__invitation">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем <br class="location__mobile-wrap"> к сотрудничеству дилеров!
         </p>
         <address class="location__address address-text">
           <p class="address-text__paragraph">
