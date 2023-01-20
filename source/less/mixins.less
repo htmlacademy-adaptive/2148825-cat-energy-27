@@ -1,7 +1,6 @@
 .title-typical() {
   margin: 0;
-
-  font-family: "Oswald","Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -69,6 +68,7 @@
 
 .fieldset-decoration() {
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -80,7 +80,7 @@
     background-color: @green;
     z-index: -1;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       width: 100%;
       top: 19px;
     }
@@ -109,4 +109,3 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-

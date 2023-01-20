@@ -19,6 +19,7 @@
   .title-typical;
   line-height: 40px;
   margin-bottom: 39px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -38,7 +39,7 @@
     padding: 32px 0 40px;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    gap: 38px 90px;
+    gap: 38px 102px;
   }
 
   @media (min-width: @desktop-width) {
@@ -61,7 +62,7 @@
     ::after {
       content: counter(number);
       position: absolute;
-      right: 30px;
+      right: 22px;
       top: 0;
       font-family: "Oswald", "Arial", sans-serif;
       font-size: 280px;
@@ -86,6 +87,7 @@
   margin: 0;
   display: flex;
   align-items: center;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
@@ -147,8 +149,9 @@
   }
 }
 
-.principles-of-work__tablet-wrap {
- display: none;
+.principles-of-work__tablet-break {
+  display: none;
+
   @media (min-width: @tablet-width) {
     display: inline;
   }

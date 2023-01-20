@@ -2,7 +2,6 @@
   padding-top: 27px;
   padding-bottom: 32px;
   margin: 0 auto;
-
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -22,6 +21,7 @@
 .application-form__main-title {
   .title-typical;
   margin: 0 auto 38px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
@@ -38,6 +38,7 @@
   font-size: 14px;
   color: @black;
   margin-bottom: 38px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 66px;
@@ -84,6 +85,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -98,7 +100,6 @@
   min-width: 160px;
   margin-left: 13px;
   appearance: none;
-  -moz-appearance: textfield;
   font: inherit;
   line-height: 18px;
   color: @dark-gray;
@@ -131,12 +132,11 @@
       outline: none;
     }
 
-  &:focus,
-  &:active {
+    &:focus,
+    &:active {
       border: 2px solid @dark-gray;
       outline: none;
       box-shadow: none;
-      -moz-appearance: textfield;
       appearance: none;
     }
   }
@@ -173,7 +173,7 @@
   margin: auto 0;
   right: 15px;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     right: 18px;
   }
 }
@@ -201,8 +201,8 @@
   gap: 13px;
   margin: 0;
   padding: 22px 0 19px;
-
   border: none;
+
   @media (min-width: @tablet-width) {
     border: 1px solid @gray;
     padding: 25px 28px;
@@ -216,6 +216,7 @@
 .application-form__radio-label {
   display: flex;
   align-items: center;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -230,6 +231,7 @@
 .application-form__radio-control-mark {
   display: block;
   position: relative;
+  flex: none;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -260,11 +262,10 @@
 }
 
 .application-form__radio-input {
-  &:hover + .application-form__radio-control-mark{
+  &:hover + .application-form__radio-control-mark {
     border-color: @gray-9;
   }
 
-  /* это тоже на моё усмотрения стиль*/
   &:focus + .application-form__radio-control-mark,
   &:active + .application-form__radio-control-mark {
     border-color: @green;
@@ -280,8 +281,8 @@
   flex-direction: column;
   gap: 14px;
   margin-bottom: 24px;
-
   border: none;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
   }
@@ -310,6 +311,7 @@
   grid-column: 1 / -1;
   margin: 0;
   margin-bottom: 20px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 58px;
@@ -317,6 +319,7 @@
 
   &--comment {
     margin-bottom: 35px;
+
     @media (min-width: @tablet-width) {
       margin-bottom: 74px;
     }
@@ -338,12 +341,12 @@
   z-index: 1;
   max-width: 200px;
   background-color: @white;
-
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: @black;
   text-transform: none;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     padding: 0 40px;
@@ -402,9 +405,9 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
-
   margin-bottom: 34px;
   border: none;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
     display: grid;
@@ -422,6 +425,8 @@
   display: flex;
   align-items: center;
   color: @black;
+  word-break: break-word;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -434,6 +439,7 @@
 
 .application-form__checkbox-control-mark {
   position: relative;
+  flex: none;
   width: 30px;
   height: 30px;
   border: 1px solid @gray-5;
@@ -493,20 +499,20 @@
 .application-form__button {
   width: 100%;
 
-  @media(max-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     margin-bottom: 21px;
   }
 }
 
 .application-form__note {
   display: block;
-
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   color: @black;
   text-transform: none;
   text-align: center;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     padding-top: 14px;

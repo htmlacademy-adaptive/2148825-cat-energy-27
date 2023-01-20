@@ -2,13 +2,13 @@
   display: flex;
   padding-top: 18px;
   margin: 0;
-
   text-decoration: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: @black;
   text-transform: uppercase;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     max-width: 340px;
@@ -30,10 +30,11 @@
     background-repeat: no-repeat;
     background-position: left;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       margin-left: 25px;
     }
   }
+
   &:hover::after,
   &:focus::after {
     background-image: url("../img/icon-arrow-hover.svg");

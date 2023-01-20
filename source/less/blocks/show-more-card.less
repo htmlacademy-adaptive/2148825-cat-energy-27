@@ -1,10 +1,10 @@
 .show-more-card {
   position: relative;
-  padding:  82px 20px 25px;
+  padding: 82px 20px 25px;
   border-top: 1px solid @gray-4;
   border-bottom: 1px solid @gray-4;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     border: 2px solid @light-gray;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     padding: 161px 39px 38px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     padding: 160px 38px 41px;
   }
 
@@ -29,7 +29,7 @@
     margin: 0 auto;
     background-color: @gray-8;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       width: 60px;
       top: 82px;
     }
@@ -47,7 +47,7 @@
     margin: 0 auto;
     background-color: @gray-8;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       height: 60px;
       top: 52px;
     }
@@ -57,7 +57,6 @@
 .show-more-card__title {
   margin: 0;
   margin-bottom: 8px;
-
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -66,14 +65,14 @@
   text-transform: uppercase;
   text-align: center;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     width: 70%;
     font-size: 20px;
     line-height: 22px;
     margin-bottom: 23px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     width: 100%;
   }
 }
@@ -81,23 +80,24 @@
 .show-more-card__description {
   margin: 0;
   margin-bottom: 20px;
-
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  word-break: break-word;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     width: 70%;
     font-size: 16px;
     line-height: 18px;
-    margin-bottom: auto;
+    margin-bottom: 33px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     width: 100%;
   }
 }
 
 .show-more-card__button {
+  margin-top: auto;
   align-self: stretch;
 }

@@ -1,7 +1,6 @@
 .button {
   display: block;
   padding: 10px 26px;
-
   text-decoration: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -10,14 +9,13 @@
   text-align: center;
   text-transform: uppercase;
   color: @white;
-
   border: none;
   background-color: @green;
   outline: inherit;
-
   cursor: pointer;
+  word-break: break-word;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     padding: 10px 26px;
   }
 
@@ -26,7 +24,7 @@
     line-height: 18px;
     padding: 10px 26px;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       padding: 17px 26px;
       font-size: 20px;
       line-height: 20px;
@@ -34,7 +32,7 @@
   }
 
   &--form {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       padding: 14px 26px;
       font-size: 20px;
       line-height: 20px;

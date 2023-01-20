@@ -13,7 +13,6 @@
 }
 
 .additional-products__wrapper {
-  //display: grid;
   @media (min-width: @desktop-width) {
     .grid-desktop;
   }
@@ -32,17 +31,17 @@
 }
 
 .additional-products__title {
-  display: inline;
+  display: inline-block;
   margin: 0;
   padding-right: 21px;
   background-color: @white;
-
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   color: @black;
   text-transform: none;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     padding: 0 36px;
@@ -64,14 +63,12 @@
   @media (min-width: @tablet-width) {
     border-right: 1px solid @gray-5;
     border-left: 1px solid @gray-5;
-
     margin-bottom: 69px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / 4;
     margin: 0;
-
     border-right: none;
     border-left: none;
   }
@@ -80,12 +77,10 @@
 .additional-products__gift {
   position: relative;
   padding: 187px 55px 43px;
-
   font-size: 16px;
   line-height: 20px;
   color: @white;
   text-align: center;
-
   background-color: rgba(@green, 0.85);
   background-image: url("../img/gift-background.jpg");
   background-repeat: no-repeat;
@@ -131,7 +126,7 @@
     background-position: center;
     background-size: contain;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       width: 80px;
       height: 82px;
       top: 0;
@@ -140,7 +135,7 @@
       left: 77px;
     }
 
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       top: 59px;
       margin: 0 auto;
       right: 0;
@@ -152,13 +147,15 @@
 
 .additional-products__gift-paragraph {
   margin: 0;
+  word-break: break-word;
+
   @media (min-width: @tablet-width) {
     margin-left: auto;
     text-align: left;
     width: 161px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     text-align: center;
   }
 }
