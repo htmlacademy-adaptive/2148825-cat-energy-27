@@ -85,6 +85,30 @@
   }
 }
 
+.location__map-image {
+  display: none;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &--nojs {
+    display: block;
+  }
+}
+
 .location__map {
   display: block;
   border: none;
@@ -103,5 +127,9 @@
     top: 0;
     left: 0;
     right: 0;
+  }
+
+  &--nojs {
+    display: none;
   }
 }
