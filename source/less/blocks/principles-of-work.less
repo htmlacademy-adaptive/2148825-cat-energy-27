@@ -76,6 +76,18 @@
         right: 0;
       }
     }
+
+    &--first {
+      ::after {
+        @media (min-width: @tablet-width) {
+          right: 45px;
+        }
+
+        @media (min-width: @desktop-width) {
+          right: 21px;
+        }
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
