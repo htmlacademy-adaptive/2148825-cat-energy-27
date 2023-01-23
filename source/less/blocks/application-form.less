@@ -94,10 +94,10 @@
 }
 
 .application-form__form-input {
-  all: unset;
   padding: 13px 20px;
   flex: auto;
   width: 60%;
+  height: 45px;
   min-width: 160px;
   margin-left: 13px;
   appearance: none;
@@ -108,6 +108,7 @@
   color: @dark-gray;
   text-transform: uppercase;
   border: 1px solid @gray-5;
+  box-sizing: border-box;
 
   /* stylelint-disable */
   &::-webkit-outer-spin-button,
@@ -120,6 +121,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 11px 20px;
+    height: 52px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -232,10 +234,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-
-  &--disabled {
-    opacity: 30%;
-  }
 }
 
 .application-form__radio-control-mark {
@@ -279,6 +277,10 @@
   &:focus + .application-form__radio-control-mark,
   &:active + .application-form__radio-control-mark {
     border-color: @green;
+  }
+
+  &:disabled + .application-form__radio-control-mark {
+    opacity: 30%;
   }
 }
 
@@ -395,6 +397,12 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / -1;
+    margin-bottom: 68px;
+  }
+
+  &::placeholder {
+    opacity: 1;
+    color: @dark-gray;
   }
 
   &:hover {
@@ -407,6 +415,10 @@
     border: 2px solid @dark-gray;
     outline: none;
     box-shadow: none;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
   }
 }
 
@@ -440,10 +452,6 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  &--disabled {
-    opacity: 30%;
   }
 }
 
@@ -489,6 +497,9 @@
 
   &:active + .application-form__checkbox-control-mark {
     border-color: @green;
+  }
+  &:disabled + .application-form__checkbox-control-mark {
+    opacity: 30%;
   }
 }
 
