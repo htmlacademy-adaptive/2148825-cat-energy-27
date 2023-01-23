@@ -7,7 +7,9 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 80px;
+    margin-bottom: 71px;
   }
 }
 
@@ -16,21 +18,19 @@
   position: relative;
   flex-direction: column;
   margin-bottom: 20px;
-  padding: 24px 33px 23px 20px;
+  padding: 28px 33px 23px 20px;
   min-width: 280px;
-
   background-color: @light-gray;
 
   @media (min-width: @tablet-width) {
-    padding: 77px 62px 53px 52px;
+    padding: 77px 62px 57px 52px;
     margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    flex-grow: 1;
-    min-width: 570px;
-    padding: 77px 67px 55px 52px;
-    margin-bottom: 71px;
+    width: 570px;
+    padding: 77px 64px 55px 52px;
+    margin-bottom: 0;
   }
 
   &--weight-loss {
@@ -49,7 +49,7 @@
     content: "";
     width: 67px;
     height: 50px;
-    background-size: auto  50px;
+    background-size: auto 50px;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -57,9 +57,9 @@
     left: 13px;
 
     @media (min-width: @tablet-width) {
-      background-size: auto  200px;
+      background-size: contain;
       width: 268px;
-      height: 200px;
+      height: 211px;
       top: auto;
       left: auto;
       right: 28px;
@@ -69,7 +69,7 @@
     @media (min-width: @desktop-width) {
       width: 134px;
       height: 100px;
-      background-size: auto  100px;
+      background-size: auto 100px;
       top: 47px;
       left: 33px;
       right: auto;
@@ -80,22 +80,21 @@
 
 .approaches__title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   margin-left: 71px;
   padding: 0;
-
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   color: @black;
   text-transform: uppercase;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     max-width: 340px;
     margin-bottom: 24px;
     margin-left: 0;
-
     font-size: 36px;
     line-height: 36px;
   }
@@ -110,19 +109,19 @@
 .approaches__description {
   margin: 0;
   margin-bottom: 23px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
+    width: 57%;
     min-height: 82px;
-    margin-bottom: 48px;
-
+    margin-bottom: 34px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
-    margin-bottom: 23px;
+    margin-bottom: 18px;
   }
 }
 
@@ -130,11 +129,6 @@
   border-top: 1px solid @gray;
 
   @media (min-width: @tablet-width) {
-    max-width: 340px;
-
-    font-size: 20px;
-    line-height: 30px;
-
     border-top: none;
   }
 }

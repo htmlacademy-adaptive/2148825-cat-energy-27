@@ -1,9 +1,9 @@
 .before-after {
-  margin: 0 auto;
   width: 280px;
   height: 256px;
   position: relative;
   z-index: 1;
+
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
@@ -31,9 +31,11 @@
 .before-after__image-before {
   width: 280px;
   height: 256px;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
+
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
@@ -43,9 +45,11 @@
 .before-after__image-after {
   width: 280px;
   height: 256px;
+  object-fit: cover;
   position: absolute;
   top: 0;
   right: 0;
+
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
@@ -77,12 +81,12 @@
 
 .before-after__toggle-button {
   display: block;
-  padding: 20px;
-  width: 40px;
-  height: 40px;
+  padding: 18px;
+  width: 36px;
+  height: 36px;
   position: relative;
   background-color: @white;
-  border: 2px solid @gray-6;
+  border: 3px solid @gray-6;
   border-radius: 50%;
   cursor: pointer;
   transform: translateX(-50%);
@@ -92,18 +96,18 @@
     content: "";
     .triangle(left; 9px; @gray-6);
     position: absolute;
-    top: 11px;
-    left: 8px;
-    bottom: 11px;
+    top: 9px;
+    left: 5px;
+    bottom: 9px;
   }
 
   &::after {
     content: "";
     .triangle(right; 9px; @gray-6);
     position: absolute;
-    top: 11px;
-    right: 8px;
-    bottom: 11px;
+    top: 9px;
+    right: 5px;
+    bottom: 9px;
   }
 
   &:hover,
@@ -112,7 +116,7 @@
   }
 
   &:hover::before,
-  &:focus::before{
+  &:focus::before {
     border-right-color: @green;
   }
 

@@ -1,17 +1,19 @@
 .address-text {
   font-style: normal;
+  line-height: 20px;
 }
 
 .address-text__paragraph {
   margin: 0;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
-    margin: 0.5em 0;
+    margin-bottom: 1em;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
-    flex-grow: 1;
+    margin-bottom: 0;
     text-align: left;
   }
 }

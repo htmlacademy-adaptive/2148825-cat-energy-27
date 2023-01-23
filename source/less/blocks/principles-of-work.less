@@ -5,11 +5,11 @@
     padding-top: 15px;
     padding-right: 75px;
     padding-bottom: 0;
-
     border-bottom: 1px solid @gray-2;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 4px;
     padding-right: 110px;
     border: none;
   }
@@ -18,12 +18,13 @@
 .principles-of-work__title {
   .title-typical;
   line-height: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 0;
+    margin-bottom: 6px;
   }
 }
 
@@ -31,18 +32,19 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  counter-reset: number;
 
   @media (min-width: @tablet-width) {
     display: grid;
-    padding: 32px 0 47px;
+    padding: 32px 0 40px;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    gap: 37px 134px;
+    gap: 38px 102px;
   }
 
   @media (min-width: @desktop-width) {
     .grid-desktop;
-    padding: 32px 0 69px;
+    padding: 32px 0 0;
   }
 }
 
@@ -53,33 +55,43 @@
     margin: 0;
     min-height: 280px;
     padding-top: 34px;
+    width: 96%;
+    position: relative;
+    counter-increment: number;
 
-    background-repeat: no-repeat;
-    background-position: right 34px;
-  }
+    ::after {
+      content: counter(number);
+      position: absolute;
+      right: 22px;
+      top: 0;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      font-weight: 400;
+      line-height: 280px;
+      color: @light-gray;
+      text-align: right;
+      z-index: -1;
 
-  &--one {
-    @media (min-width: @tablet-width) {
-      background-image: url("../img/one.svg");
+      @media (min-width: @desktop-width) {
+        right: 0;
+      }
+    }
+
+    &--first {
+      ::after {
+        @media (min-width: @tablet-width) {
+          right: 45px;
+        }
+
+        @media (min-width: @desktop-width) {
+          right: 21px;
+        }
+      }
     }
   }
 
-  &--two {
-    @media (min-width: @tablet-width) {
-      background-image: url("../img/two.svg");
-    }
-  }
-
-  &--three {
-    @media (min-width: @tablet-width) {
-      background-image: url("../img/three.svg");
-    }
-  }
-
-  &--four {
-    @media (min-width: @tablet-width) {
-      background-image: url("../img/four.svg");
-    }
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -87,13 +99,18 @@
   margin: 0;
   display: flex;
   align-items: center;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: flex-start;
-
+    width: 90%;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 
   &--nutrients {
@@ -141,5 +158,13 @@
       margin-right: 0;
       margin-bottom: 31px;
     }
+  }
+}
+
+.principles-of-work__tablet-break {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }

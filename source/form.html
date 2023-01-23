@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru" xmlns="http://www.w3.org/1999/html">
+<html class="page" lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,9 @@
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="page__body">
 <header class="main-header main-header--nojs">
@@ -26,7 +29,7 @@
     </button>
   </div>
   <nav class="main-header__nav main-header__nav--closed main-header__nav--nojs">
-  <ul class="main-header__list navigation-list">
+    <ul class="main-header__list navigation-list">
       <li class="navigation-list__item">
         <a class="navigation-list__link" href="index.html">
           Главная
@@ -47,15 +50,15 @@
 </header>
 <main class="main-container">
   <section class="application-form">
-    <h1 class="application-form__main-title container--form">
+    <h1 class="application-form__main-title container-form">
       Подбор программы
     </h1>
-    <p class="application-form__paragraph container--form">
-      Заполните анкету, и мы подберем программу питания для вашего кота
+    <p class="application-form__paragraph container-form">
+      Заполните анкету, и мы подберем&nbsp;<br class="application-form__mobile-break">программу питания для вашего кота
     </p>
     <form class="application-form__form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="application-form__wrapper">
-        <fieldset class="application-form__personal container--form">
+        <fieldset class="application-form__personal container-form">
           <legend class="visually-hidden">
             Персональные данные.
           </legend>
@@ -75,7 +78,7 @@
             <input class="application-form__form-input" type="number" name="age" placeholder="7">
           </label>
         </fieldset>
-        <div class="application-form__radio-wrapper container--form">
+        <div class="application-form__radio-wrapper container-form">
           <fieldset class="application-form__radio ">
             <legend class="visually-hidden">
               Желаемые цели.
@@ -103,7 +106,7 @@
         </div>
       </div>
       <div class="application-form__fieldset-wrapper">
-        <fieldset class="application-form__contacts container--form">
+        <fieldset class="application-form__contacts container-form">
           <div class="application-form__title-wrapper">
             <h3 class="application-form__title">
               Контактные данные (владельца кота)
@@ -128,8 +131,8 @@
         </fieldset>
       </div>
       <div class="application-form__fieldset-wrapper">
-        <div class="application-form__comment container--form">
-          <div class="application-form__title-wrapper">
+        <div class="application-form__comment container-form">
+          <div class="application-form__title-wrapper application-form__title-wrapper--comment">
             <h3 class="application-form__title">
               Комментарий
             </h3>
@@ -142,7 +145,7 @@
         </div>
       </div>
       <div class="application-form__fieldset-wrapper">
-        <fieldset class="application-form__checkbox container--form">
+        <fieldset class="application-form__checkbox container-form">
           <div class="application-form__title-wrapper application-form__title-wrapper--checkbox">
             <h3 class="application-form__title">
               Дополнительно
@@ -175,8 +178,8 @@
           </label>
         </fieldset>
       </div>
-      <div class="application-form__footer-wrapper container--form">
-        <button class="application-form__button button" type="submit">
+      <div class="application-form__footer-wrapper container-form">
+        <button class="application-form__button button button--form" type="submit">
           Отправить заявку
         </button>
         <small class="application-form__note">
@@ -192,7 +195,7 @@
     <div class="location__container">
       <div class="location__wrapper container">
         <p class="location__invitation">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем<br class="location__mobile-break">к сотрудничеству дилеров!
         </p>
         <address class="location__address address-text">
           <p class="address-text__paragraph">
@@ -204,9 +207,15 @@
         </address>
       </div>
     </div>
-    <iframe class="location__map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197866!2d30.320472476852885!3d59.93871916209409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1671792798573!5m2!1sen!2sru"
-            width="320" height="362" allowfullscreen title="Карта расположения Cat Energy"></iframe>
+    <picture>
+      <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop-1x.webp 1x, img/map-desktop-2x.webp 2x">
+      <source media="(min-width: 1440px)" srcset="img/map-desktop-1x.png 1x, img/map-desktop-2x.png 2x">
+      <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet-1x.webp 1x, img/map-tablet-2x.webp 2x">
+      <source media="(min-width: 768px)" srcset="img/map-tablet-1x.png 1x, img/map-tablet-2x.png 2x">
+      <source type="image/webp" srcset="img/map-mobile-1x.webp 1x, img/map-mobile-2x.webp 2x">
+      <img class="location__map-image location__map-image--nojs" src="img/map-mobile-1x.png" srcset="img/map-mobile-2x.png" width="320" height="362"  alt="Карта местонахождения офиса Cat energy" loading="lazy">
+    </picture>
+    <iframe class="location__map location__map--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197866!2d30.320472476852885!3d59.93871916209409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1671792798573!5m2!1sen!2sru" width="320" height="362" allowfullscreen title="Карта расположения Cat Energy"></iframe>
   </section>
 </main>
 <footer class="page-footer">

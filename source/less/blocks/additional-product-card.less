@@ -1,9 +1,9 @@
 .additional-product-card {
-  padding: 12px 0 20px;
+  padding: 12px 0 19px;
   border-bottom: 1px solid @gray-5;
 
   &--first {
-  border-top: 1px solid @gray-5;
+    border-top: 1px solid @gray-5;
   }
 
   @media (min-width: @tablet-width) {
@@ -20,33 +20,39 @@
 
 .additional-product-card__wrapper {
   @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   @media (min-width: @desktop-width) {
     flex: auto;
-    margin-right: 40px;
+    margin-bottom: 0;
+    margin-right: 35px;
   }
 }
 
 .additional-product-card__title {
   margin: 0;
   margin-bottom: 13px;
-
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   color: @light-black;
   text-transform: uppercase;
+  word-break: break-word;
+
   @media (min-width: @tablet-width) {
-    max-width: 50%;
+    max-width: 40%;
     font-size: 20px;
     line-height: 20px;
   }
+
   @media (min-width: @desktop-width) {
-    max-width: 25%;
+    margin-bottom: 0;
+    max-width: 30%;
   }
 }
 
@@ -57,33 +63,51 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-
   line-height: 14px;
 
   @media (min-width: @tablet-width) {
-    max-width: 50%;
+    max-width: 60%;
     font-size: 16px;
     line-height: 20px;
   }
+
   @media (min-width: @desktop-width) {
-    width: 47%;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    width: 48%;
+    align-items: center;
   }
 }
 
 .additional-product-card__amount {
+  word-break: break-word;
+  max-width: 45%;
+
   @media (min-width: @tablet-width) {
+    max-width: 100%;
+    width: 134px;
     margin-right: 40px;
+    text-align: right;
   }
+
   @media (min-width: @desktop-width) {
+    width: auto;
+    max-width: 50%;
     margin-right: auto;
   }
 }
 
 .additional-product-card__price {
+  max-width: 45%;
+  word-break: break-word;
+
   @media (min-width: @tablet-width) {
     width: 50px;
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
   }
 }
 

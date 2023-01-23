@@ -2,14 +2,13 @@
   padding-top: 25px;
   padding-bottom: 40px;
   position: relative;
-
-
   background-color: @gray-3;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 100px;
-
+    padding-top: 42px;
+    padding-bottom: 103px;
     background-color: @white;
+
     &::after {
       content: "";
       background-color: @gray-3;
@@ -23,6 +22,7 @@
     }
 
     @media (min-width: @desktop-width) {
+      padding-top: 25px;
       padding-bottom: 75px;
     }
   }
@@ -40,16 +40,17 @@
 
 .live-example__text-wrapper {
   z-index: 1;
+
   @media (min-width: @desktop-width) {
-    max-width: 440px;
+    max-width: 433px;
   }
 }
 
 .live-example__title {
   .title-typical;
   line-height: 40px;
-
   margin-bottom: 40px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -66,10 +67,10 @@
 .live-example__description {
   margin: 0;
   margin-bottom: 20px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
-
     font-size: 16px;
     line-height: 24px;
   }
@@ -83,9 +84,19 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 100px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+  }
+}
+
+.live-example__slider {
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    align-self: center;
   }
 }

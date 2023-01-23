@@ -4,7 +4,6 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-
   border-bottom: 1px solid @gray-2;
 
   @media (min-width: @tablet-width) {
@@ -16,29 +15,28 @@
 
 .navigation-list__item {
   margin: 0;
-
   border-top: 1px solid @gray-2;
 
   @media (min-width: @tablet-width) {
-      margin-left: 34px;
-      border: none;
+    margin-left: 37px;
+    border: none;
   }
 }
 
 .navigation-list__link {
   display: block;
-  padding: 24px 60px;
-
+  padding: 23px 60px;
   color: inherit;
   text-decoration: none;
   text-align: center;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
-      padding: 10px 0;
+    padding: 18px 0 10px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 8px 0;
+    padding: 12px 0;
   }
 
   &:hover,

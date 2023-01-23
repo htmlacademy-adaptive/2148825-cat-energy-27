@@ -1,16 +1,23 @@
 .main-products {
   .container;
-  @media (max-width: (@tablet-width - 1px)) {
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 24px;
     padding: 0;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 74px;
   }
 }
 
 .main-products__container {
   display: grid;
+
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     gap: 141px 60px;
@@ -21,4 +28,3 @@
     row-gap: 144px;
   }
 }
-

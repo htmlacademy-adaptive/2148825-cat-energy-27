@@ -1,14 +1,24 @@
 .link-accent {
   display: flex;
-  padding-top: 15px;
+  padding-top: 18px;
   margin: 0;
-
   text-decoration: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: @black;
   text-transform: uppercase;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    max-width: 340px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 
   &::after {
     content: "";
@@ -19,11 +29,13 @@
     background-image: url("../img/icon-arrow.svg");
     background-repeat: no-repeat;
     background-position: left;
+    flex-shrink: 0;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       margin-left: 25px;
     }
   }
+
   &:hover::after,
   &:focus::after {
     background-image: url("../img/icon-arrow-hover.svg");

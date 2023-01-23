@@ -1,7 +1,6 @@
 .banner {
   margin-bottom: 20px;
   position: relative;
-
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -9,10 +8,12 @@
   color: @white;
 
   @media (min-width: @tablet-width) {
-      color: @black;
+    margin-bottom: 0;
+    color: @black;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
     position: static;
   }
 
@@ -21,7 +22,7 @@
     display: block;
     height: 63%;
     width: 100%;
-    background-color: @green;
+    background-color: @green-3;
     background-image: url("../img/banner-background.jpg");
     background-position: center;
     background-size: contain;
@@ -62,30 +63,30 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    padding: 27px 117px 526px;
+    padding: 33px 117px 526px;
     position: relative;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 111px 190px 186px;
+    padding: 82px 190px 186px;
   }
 }
 
 .banner__title {
   margin: 0;
   margin-bottom: 25px;
-
   text-align: center;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
-      margin-bottom: 41px;
-       max-width: 420px;
-      text-align: left;
-      font-size: 60px;
-      line-height: 60px;
+    margin-bottom: 41px;
+    max-width: 420px;
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,9 +97,9 @@
 .banner__slogan {
   margin: 0;
   margin-bottom: 30px;
-
   text-align: center;
   text-transform: uppercase;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 49px;
@@ -113,30 +114,29 @@
   }
 }
 
-.banner__image  {
+.banner__image {
   display: block;
   margin: 0 auto 3px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 234px;
-    right: 0;
+    bottom: 0;
+    right: 32px;
     order: 1;
     z-index: -1;
-
     width: 709px;
     height: auto;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    top: 32px;
+    top: 0;
+    bottom: auto;
     right: 330px;
-
     width: 552px;
     height: auto;
   }
-};
+}
 
 .banner__button {
   @media (min-width: @tablet-width) {
